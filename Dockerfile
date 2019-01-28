@@ -7,7 +7,7 @@ WORKDIR /opt/adfree/
 
 RUN mkdir -p /opt/bin/ /opt/adfree/files /opt/adfree/dbDat/dbsql /opt/adfree/dbDat/ssl &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-COPY --from=build-env-go110 /opt/bin/tlmuser /opt/bin/
+COPY --from=TLMUSERS /opt/bin/tlmuser /opt/bin/
 ADD dockerfiles/bin/* /opt/bin/
 
 ADD https://zinc.tpnfc.us/TLM.crt /etc/ssl/certs/
