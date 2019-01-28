@@ -1,0 +1,23 @@
+---
+cockroach:
+  name: "coredns"
+  adapter: "postgres"
+  host: "0000"
+  port: 26257
+  user: "zytankylrad"
+  password: ""
+  root: "root"
+  test: cttrue
+  sslmode: "verify-ca"
+  sslcert: "ssl/certs/zytankylrad.crt"
+  sslkey: "ssl/certs/zytankylrad.key"
+  sslrootcert: "ssl/certs/ca.crt"
+  rootcert: "ssl/certs/client.root.crt"
+  rootkey: "ssl/certs/client.root.key"
+
+adserver:
+  filepath: "dbDat/"
+  sqlpath: "dbDat/dbsql/"
+  sslpath: "dbDat/ssl/"
+  test: atfalse
+...
